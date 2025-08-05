@@ -1,0 +1,11 @@
+StudentID,Branch,Semester,SubjectCode,MidTermMarks,FinalMarks,ClassesAttended,TotalClasses,SubjectName,Assignment-1,Assignment-2,TotalAssign-Score
+S006,Civil,3,CE301,23,69,41,50,Structural Engineering,14,17,31
+S006,Civil,3,CE302,19,64,36,50,Fluid Mechanics,11,14,25
+S007,Civil,3,CE301,25,70,40,50,Structural Engineering,15,18,33
+S007,Civil,3,CE302,20,65,38,50,Fluid Mechanics,12,16,28
+S008,Civil,3,CE301,24,72,39,50,Structural Engineering,16,19,35
+S008,Civil,3,CE302,21,66,37,50,Fluid Mechanics,13,15,28
+S009,Civil,3,CE301,26,71,41,50,Structural Engineering,14,17,31
+S009,Civil,3,CE302,22,68,36,50,Fluid Mechanics,11,14,25
+S010,Civil,3,CE301,23,69,42,50,Structural Engineering,15,18,33
+S010,Civil,3,CE302,19,64,39,50,Fluid Mechanics,12,16,28
