@@ -1,0 +1,11 @@
+StudentID,Branch,Semester,SubjectCode,MidTermMarks,FinalMarks,ClassesAttended,TotalClasses,SubjectName,Assignment-1,Assignment-2,TotalAssign-Score,,,,
+S011,Electrical,3,EE301,26,71,43,50,Circuit Theory,15,18,33,,,,
+S011,Electrical,3,EE302,20,67,39,50,Control Systems,12,16 references,50,Control Systems,13,15,28
+S012,Electrical,3,EE301,24,70,40,50,Circuit Theory,14,17,31,,,,
+S012,Electrical,3,EE302,21,66,38,50,Control Systems,13,15,28,,,,
+S013,Electrical,3,EE301,25,72,41,50,Circuit Theory,16,19,35,,,,
+S013,Electrical,3,EE302,22,68,37,50,Control Systems,14,17,31,,,,
+S014,Electrical,3,EE301,27,73,42,50,Circuit Theory,17,20,37,,,,
+S014,Electrical,3,EE302,20,69,39,50,Control Systems,12,16,28,,,,
+S015,Electrical,3,EE301,23,71,40,50,Circuit Theory,15,18,33,,,,
+S015,Electrical,3,EE302,19,65,38,50,Control Systems,11,14,25,,,,

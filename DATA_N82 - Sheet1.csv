@@ -1,0 +1,11 @@
+StudentID,Branch,Semester,SubjectCode,MidTermMarks,FinalMarks,ClassesAttended,TotalClasses,SubjectName,Assignment-1,Assignment-2,TotalAssign-Score
+S001,CSE,3,CS301,25,70,40,50,Algorithms,15,18,33
+S001,CSE,3,CS302,20,65,38,50,Databases,12,16,28
+S002,CSE,3,CS301,24,72,39,50,Algorithms,16,19,35
+S002,CSE,3,CS302,21,66,37,50,Databases,13,15,28
+S003,CSE,3,CS301,26,71,41,50,Algorithms,14,17,31
+S003,CSE,3,CS302,22,68,36,50,Databases,11,14,25
+S004,CSE,3,CS301,23,69,42,50,Algorithms,15,18,33
+S004,CSE,3,CS302,19,64,39,50,Databases,12,16,28
+S005,CSE,3,CS301,27,73,40,50,Algorithms,17,20,37
+S005,CSE,3,CS302,20,67,38,50,Databases,13,15,28
