@@ -1,0 +1,701 @@
+{
+  "name": "My workflow 3",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours"
+            }
+          ]
+        }
+      },
+      "name": "Schedule",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        -768,
+        352
+      ],
+      "id": "a4012c35-d485-4da2-9030-ad5f85ceb3d8"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1jP6u3ylBw_S09mAjyMYoyAqnSbljlA6X7MXwp4THndM",
+          "mode": "list",
+          "cachedResultName": "DATA_N82",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1jP6u3ylBw_S09mAjyMYoyAqnSbljlA6X7MXwp4THndM/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1jP6u3ylBw_S09mAjyMYoyAqnSbljlA6X7MXwp4THndM/edit#gid=0"
+        },
+        "options": {}
+      },
+      "name": "Read CSE Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        -16,
+        192
+      ],
+      "id": "02566648-2ff9-41ac-bac4-1ba775fd8344",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "LRDK2csuxXHCQygz",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1jP6u3ylBw_S09mAjyMYoyAqnSbljlA6X7MXwp4THndM",
+          "mode": "list",
+          "cachedResultName": "CSE_DATA_N82",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1jP6u3ylBw_S09mAjyMYoyAqnSbljlA6X7MXwp4THndM/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 509813392,
+          "mode": "list",
+          "cachedResultName": "Sheet2",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1jP6u3ylBw_S09mAjyMYoyAqnSbljlA6X7MXwp4THndM/edit#gid=509813392"
+        },
+        "options": {}
+      },
+      "name": "Read Civil Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        -16,
+        352
+      ],
+      "id": "3dcf28f6-ece8-493b-ad35-4287150ec9e4",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "LRDK2csuxXHCQygz",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1jP6u3ylBw_S09mAjyMYoyAqnSbljlA6X7MXwp4THndM",
+          "mode": "list",
+          "cachedResultName": "DATA_N82",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1jP6u3ylBw_S09mAjyMYoyAqnSbljlA6X7MXwp4THndM/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1589070796,
+          "mode": "list",
+          "cachedResultName": "Sheet3",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1jP6u3ylBw_S09mAjyMYoyAqnSbljlA6X7MXwp4THndM/edit#gid=1589070796"
+        },
+        "options": {}
+      },
+      "name": "Read Electrical Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        -16,
+        512
+      ],
+      "id": "7881ad5d-9d9e-4bd6-91f3-3af78ac9a193",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "LRDK2csuxXHCQygz",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "StudentID"
+            },
+            {
+              "name": "Branch"
+            },
+            {
+              "name": "Semester"
+            },
+            {
+              "name": "SubjectCode"
+            },
+            {
+              "name": "MidTermMarks"
+            },
+            {
+              "name": "FinalMarks"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set Marks Data",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        512,
+        176
+      ],
+      "id": "5e5d841a-3a6e-4ba8-b84f-18bcd5fa405d"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "StudentID"
+            },
+            {
+              "name": "SubjectCode"
+            },
+            {
+              "name": "ClassesAttended"
+            },
+            {
+              "name": "TotalClasses"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set Attendance Data",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        496,
+        368
+      ],
+      "id": "b86a0890-fa9f-4c3e-8316-c694f9ca78f4"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "SubjectCode",
+              "value": "={{ $json.SubjectCode }}"
+            },
+            {
+              "name": "SubjectName",
+              "value": "={{ $json.SubjectName }}"
+            },
+            {
+              "name": "Semester",
+              "value": "={{ $json.Semester }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set Subjects Data",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        496,
+        512
+      ],
+      "id": "ea74a250-3cd8-4f64-b515-0359bcdea1a3"
+    },
+    {
+      "parameters": {
+        "operation": "toFile",
+        "fileFormat": "csv",
+        "options": {}
+      },
+      "name": "Convert to Marks CSV",
+      "type": "n8n-nodes-base.spreadsheetFile",
+      "typeVersion": 1,
+      "position": [
+        816,
+        176
+      ],
+      "id": "61e55fc0-f653-4bc9-b623-4bed14c196a2"
+    },
+    {
+      "parameters": {
+        "operation": "toFile",
+        "fileFormat": "csv",
+        "options": {}
+      },
+      "name": "Convert to Attendance CSV",
+      "type": "n8n-nodes-base.spreadsheetFile",
+      "typeVersion": 1,
+      "position": [
+        816,
+        368
+      ],
+      "id": "e2213214-86ad-4e12-b151-693cf821f908"
+    },
+    {
+      "parameters": {
+        "operation": "toFile",
+        "fileFormat": "csv",
+        "options": {}
+      },
+      "name": "Convert to Subjects CSV",
+      "type": "n8n-nodes-base.spreadsheetFile",
+      "typeVersion": 1,
+      "position": [
+        816,
+        512
+      ],
+      "id": "661b0952-b1e6-49d8-ad6e-f4cae1aa7c82"
+    },
+    {
+      "parameters": {
+        "numberInputs": 3
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        256,
+        352
+      ],
+      "id": "f81803c3-8bde-4825-845a-8817d8671bc3",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "JgrSslQKeVI2DZfz",
+          "mode": "list",
+          "cachedResultName": "testsub"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        1360,
+        688
+      ],
+      "id": "493c4fc9-8a38-431b-9494-2341bff6410c",
+      "name": "Execute Workflow",
+      "retryOnFail": true,
+      "maxTries": 4,
+      "waitBetweenTries": 2000
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "createFromText",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "root",
+          "cachedResultName": "/ (Root folder)"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1072,
+        512
+      ],
+      "id": "1d6cd96b-b98c-4f0e-87b8-f206c156ae69",
+      "name": "subject",
+      "credentials": {
+        "googleApi": {
+          "id": "vLXSKbMJKYWkngjP",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "fileId": {
+          "__rl": true,
+          "value": "1lupmHzc60zXn4NlPkXgalFPHmN9owzr6",
+          "mode": "list",
+          "cachedResultName": "attendance",
+          "cachedResultUrl": "https://drive.google.com/file/d/1lupmHzc60zXn4NlPkXgalFPHmN9owzr6/view?usp=drivesdk"
+        },
+        "changeFileContent": true,
+        "newUpdatedFileName": "attendance",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1072,
+        368
+      ],
+      "id": "e123c252-226b-4282-bd30-458657088678",
+      "name": "Attendence",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "A21ZQKGYT8g36reR",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "SubjectCode",
+              "value": "={{ $json.SubjectCode }}"
+            },
+            {
+              "name": "SubjectName",
+              "value": "={{ $json.SubjectName }}"
+            },
+            {
+              "name": "Semester",
+              "value": "={{ $json.Semester }}"
+            },
+            {
+              "name": "StudentID",
+              "value": "={{ $json.StudentID }}"
+            },
+            {
+              "name": "Branch",
+              "value": "={{ $json.Branch }}"
+            },
+            {
+              "name": "Assignment-1",
+              "value": "={{ $json['Assignment-1'] }}"
+            },
+            {
+              "name": "Assignment-2",
+              "value": "={{ $json['Assignment-2'] }}"
+            },
+            {
+              "name": "TotalAssign-Score",
+              "value": "={{ $json['TotalAssign-Score'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Assignments",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        496,
+        688
+      ],
+      "id": "2c66c43d-a47c-4db4-aa3f-b9defa077123"
+    },
+    {
+      "parameters": {
+        "operation": "toFile",
+        "fileFormat": "csv",
+        "options": {}
+      },
+      "name": "Convert to Subjects CSV1",
+      "type": "n8n-nodes-base.spreadsheetFile",
+      "typeVersion": 1,
+      "position": [
+        816,
+        688
+      ],
+      "id": "cbaee065-de96-49f0-a34b-c119cff49dd5"
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "createFromText",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "root",
+          "cachedResultName": "/ (Root folder)"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1088,
+        688
+      ],
+      "id": "c825156b-fcdb-4176-9d2e-792e5a9ae346",
+      "name": "Assignments1",
+      "credentials": {
+        "googleApi": {
+          "id": "vLXSKbMJKYWkngjP",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "createFromText",
+        "name": "test",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "root",
+          "cachedResultName": "/ (Root folder)"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1056,
+        176
+      ],
+      "id": "0bb856d7-08ea-4a28-ab30-be772d6ae433",
+      "name": "Create file from text",
+      "credentials": {
+        "googleApi": {
+          "id": "vLXSKbMJKYWkngjP",
+          "name": "Google Drive account"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Attendence": [
+      {
+        "json": {
+          "name": "First item",
+          "code": 1
+        }
+      },
+      {
+        "json": {
+          "name": "Second item",
+          "code": 2
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Schedule": {
+      "main": [
+        [
+          {
+            "node": "Read CSE Sheet",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Read Civil Sheet",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Read Electrical Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read CSE Sheet": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Civil Sheet": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Set Marks Data": {
+      "main": [
+        [
+          {
+            "node": "Convert to Marks CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Attendance Data": {
+      "main": [
+        [
+          {
+            "node": "Convert to Attendance CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Subjects Data": {
+      "main": [
+        [
+          {
+            "node": "Convert to Subjects CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to Marks CSV": {
+      "main": [
+        [
+          {
+            "node": "Create file from text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to Attendance CSV": {
+      "main": [
+        [
+          {
+            "node": "Attendence",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to Subjects CSV": {
+      "main": [
+        [
+          {
+            "node": "subject",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Electrical Sheet": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Set Marks Data",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set Attendance Data",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set Subjects Data",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Assignments",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Assignments": {
+      "main": [
+        [
+          {
+            "node": "Convert to Subjects CSV1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to Subjects CSV1": {
+      "main": [
+        [
+          {
+            "node": "Assignments1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Assignments1": {
+      "main": [
+        [
+          {
+            "node": "Execute Workflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e423169b-9e50-4fbe-8d34-9ee3e17b51c4",
+  "meta": {
+    "instanceId": "9a82ca4fabb3996472cae2399b29e286639f8b7b39dcfd9ca39d3c462ec84b2d"
+  },
+  "id": "MVRWeVhVUjoY2Js7",
+  "tags": []
+}
